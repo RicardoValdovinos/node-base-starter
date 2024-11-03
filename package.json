@@ -11,7 +11,7 @@
     "test:run": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "build": "pnpm run format && pnpm run lint && pnpm run test && tsc -p tsconfig.json",
+    "build": "pnpm run format && pnpm run lint && pnpm run test:run && tsc -p tsconfig.json",
     "start": "node dist/src/app.js",
     "dev": "tsx src/app.ts | pino-pretty"
   },
