@@ -1,4 +1,12 @@
 import { logger } from './config/logs.js'
 
-const greeting: Array<string> = ['Hello', 'world!']
-logger.info(greeting.join(', '))
+export const buildGreeting = (name?: string) => {
+	if (!name) {
+		return 'Hello, world!'
+	}
+	return `Hello, ${name}!`
+}
+
+const greeting = buildGreeting('world')
+
+logger.info(greeting)
